@@ -1,0 +1,12 @@
+def deleteNodeatSpecific(head, position):
+    index = 0
+    currentNode = head
+    while index != position - 1:
+        index += 1
+        currentNOde = currentNode.next
+    #currentNode will point to immediate previous nodw
+    nodeToBeDeleted = currentNode.next
+    nextNode = nodeToBeDeleted.next
+    nodeToBeDeleted.next = None
+    currentNode.next = None
+    currentNode.next = nextNode
